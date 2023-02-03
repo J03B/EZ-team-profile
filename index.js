@@ -4,6 +4,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
 const fs = require('fs');
+const createPage = require('./src/template.js');
 
 // Define global variables and functions
 const teamArray = [];
@@ -46,7 +47,8 @@ console.log("\nWelcome to the EZ Team Profile Builder. Let's get started!\n");
 function init() {
     // Compile the team when finished
     function renderTeam() {
-
+        const htmlText = createPage(teamArray);
+        console.log(htmlText);
     }
 
     // Add an engineer to the team
