@@ -22,7 +22,7 @@
 This project's objective is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
 
 ### Mock Up
-![A walkthrough video of how to use the application.](./assets/tutorial.mp4)
+![A walkthrough video of how to use the application.](./assets/tutorial-team-profile.mp4)
 
 The demo above produced the mock up below. Click on the image to go directly to the example file:
 
@@ -33,7 +33,10 @@ The task here was to complete a project that would create high-quality files, ge
 
 ## Installation
 
-This project utilizes Inquirer version 8.2.4. To install, simply clone or download the repository to your device. It is run using 'node index.js' 
+This project utilizes Inquirer version 8.2.4. To install, simply clone or download the repository to your device. It is run using 
+```
+node index.js
+``` 
 
 ## Usage
 
@@ -51,7 +54,10 @@ To contribute to this repository, simply create a pull request, create issues, o
 
 ## Tests
 
-This application uses Jest for running unit tests and Inquirer for collecting input from the user (which can be used for testing by invoking the application with the command 'node index.js'. It uses snapshot test cases to render a UI component, takes a snapshot, then compares it to the reference snapshot file stored alongside the test. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new version of the UI component.
+This application uses Jest for running unit tests and Inquirer for collecting input from the user (which can also be used for testing by invoking the application with the command 'node index.js'). It uses unit test cases to render tests on each of the classes in the project and evaluates expectation for property values and methods. The test will fail if the actual functionality does not match the expected output: either the change is unexpected, or the reference  needs to be updated. After JEst is installed, the unit tests can be run with
+```
+npm run test
+```
 
 ## User Story and Acceptance Criteria
 
