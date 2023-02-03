@@ -12,7 +12,8 @@ function addTeamCards(teamArray) {
             <p class="card-text">email: <a href="mailto:${emp.getEmail()}">${emp.getEmail()}</a></p>
             <p class="card-text">Office Number: ${emp.getOfficeNumber()}</p>
         </div>
-    </div>`
+    </div>
+    `
     }
 
     // add the Engineer html card
@@ -26,7 +27,8 @@ function addTeamCards(teamArray) {
             <p class="card-text">email: <a href="mailto:${emp.getEmail()}">${emp.getEmail()}</a></p>
             <p class="card-text">GitHub: ${emp.getGithub()}</p>
         </div>
-    </div>`
+    </div>
+    `
     }
   
     // add the Intern html card
@@ -40,7 +42,8 @@ function addTeamCards(teamArray) {
             <p class="card-text">email: <a href="mailto:${emp.getEmail()}">${emp.getEmail()}</a></p>
             <p class="card-text">School: ${emp.getSchool()}</p>
         </div>
-    </div>`
+    </div>
+    `
     }
 
     const finalText = []
@@ -53,6 +56,7 @@ function addTeamCards(teamArray) {
     return finalText.join('');
 }
 
+// Need to pass the team in with the export/require
 module.exports = (teamArray) => {
     return `<!DOCTYPE html>
 <html>

@@ -9,6 +9,8 @@ const createPage = require('./src/template.js');
 // Define global variables and functions
 const teamArray = [];
 const idsTaken = [];
+const distFolder = './dist'
+const distFilePath = `${distFolder}/result.html`;
 function notEmpty(response) {
     if (response !== '') {
         return true;
@@ -48,7 +50,21 @@ function init() {
     // Compile the team when finished
     function renderTeam() {
         const htmlText = createPage(teamArray);
-        console.log(htmlText);
+        try {
+            // check if the folder exists, make it if it doesn't
+            if (!fs.existsSync(distFolder)) {
+                fs.mkdirSync(distFolder);
+            }
+        } 
+        catch (err) {
+            console.error(err);
+        }
+    
+        // Then write the HTML to the folder's result.html file
+        fs.writeFile(distFilePath, htmlText, function (err) {
+            if (err) throw err;
+            console.log(`Team Page saved in ${distFilePath}`);
+        });
     }
 
     // Add an engineer to the team
