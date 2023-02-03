@@ -26,7 +26,7 @@ This project's objective is to build a Node.js command-line application that tak
 
 The demo above produced the mock up below. Click on the image to go directly to the example file:
 
-[![The example produced from the demo or walkthrough in the video above.](./assets/mockup-demo.png)](./mockup-demo-page.html)
+[![The example produced from the demo or walkthrough in the video above.](./assets/mockup-demo.png)](./dist/result.html)
 
 ### Task Completed
 The task here was to complete a project that would create high-quality files, generated with as little input as possible. Autonomy is essential to become a proficient developer, and saving time generating crisp files would aid in those efforts. This challenge should set myself up for furure success by applying the core skills I've recently learned, meeting certain acceptance criteria with NodeJs. The criteria are documented in the Acceptance Criteria section. 

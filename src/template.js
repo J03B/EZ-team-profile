@@ -25,7 +25,7 @@ function addTeamCards(teamArray) {
             <h3 class="display-6 mb-3">${emp.getName()}</h3>
             <p class="card-text">ID: ${emp.getId()}</p>
             <p class="card-text">email: <a href="mailto:${emp.getEmail()}">${emp.getEmail()}</a></p>
-            <p class="card-text">GitHub: ${emp.getGithub()}</p>
+            <p class="card-text">GitHub: <a href="https://github.com/${emp.getGithub()}" target="_blank">${emp.getGithub()}</a></p>
         </div>
     </div>
     `
@@ -50,8 +50,8 @@ function addTeamCards(teamArray) {
 
     // We'll do these one role at a time to keep the page organized in case they added team members in a random order
     finalText.push(teamArray.filter(emp => emp.getRole() == 'Manager').map(emp => addManagerCard(emp)));
-    finalText.push(teamArray.filter(emp => emp.getRole() == 'Engineer').map(emp => addEngineerCard(emp)));
-    finalText.push(teamArray.filter(emp => emp.getRole() == 'Intern').map(emp => addInternCard(emp)));
+    finalText.push(teamArray.filter(emp => emp.getRole() == 'Engineer').map(emp => addEngineerCard(emp)).join(''));
+    finalText.push(teamArray.filter(emp => emp.getRole() == 'Intern').map(emp => addInternCard(emp)).join(''));
 
     return finalText.join('');
 }

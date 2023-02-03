@@ -21,7 +21,7 @@ function isNumber(response) {
     if (response.match(/\d/)) {
         return true;
     }
-    return 'Must be a number';
+    return 'Must contain a number';
 }
 function isEmail(response) {
     if (response.match(/\S+@\S+\.\S+/)) {
@@ -30,8 +30,7 @@ function isEmail(response) {
     return 'Must be a valid email address';
 }
 function idAlreadyTaken(response) {
-    const isNum = isNumber(response);
-    if (isNum) {
+    if (response.match(/\d/)) {
         if (idsTaken.includes(response)) {
             return 'ID already taken. Choose a different ID.';
         }
@@ -39,7 +38,7 @@ function idAlreadyTaken(response) {
             return true;
         }
     }
-    return isNum;
+    return 'Must contain a number';
 }
 
 // Program startup and welcome
@@ -55,8 +54,7 @@ function init() {
             if (!fs.existsSync(distFolder)) {
                 fs.mkdirSync(distFolder);
             }
-        } 
-        catch (err) {
+        } catch (err) {
             console.error(err);
         }
     
